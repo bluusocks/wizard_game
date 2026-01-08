@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dki8a2h4n7xrn"]
+
+[ext_resource type="Texture2D" uid="uid://dhtqh0gavy5nk" path="res://assets/slime.png" id="1_371uh"]
+[ext_resource type="Script" uid="uid://cexqvbtx0vcf6" path="res://scripts/slime.gd" id="1_p2gj0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2gj0"]
+size = Vector2(28, 15)
+
+[node name="Slime" type="RigidBody2D" groups=["mobs"]]
+gravity_scale = 0.0
+script = ExtResource("1_p2gj0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_371uh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 7.5)
+shape = SubResource("RectangleShape2D_p2gj0")
