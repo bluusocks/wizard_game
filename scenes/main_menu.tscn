@@ -1,18 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://1rj14mvbtyqv"]
+[gd_scene format=3 uid="uid://1rj14mvbtyqv"]
 
 [ext_resource type="Script" uid="uid://c1kwlub6h2fn7" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 
 [sub_resource type="SystemFont" id="SystemFont_vue75"]
 
-[node name="MainMenu" type="Node"]
+[node name="MainMenu" type="Node" unique_id=1950825582]
 script = ExtResource("1_l6cm7")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1912860164]
 offset_right = 1153.0
 offset_bottom = 646.0
 color = Color(0.1900796, 0, 0.28778577, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1797981631]
 offset_left = 269.0
 offset_top = 45.0
 offset_right = 859.0
@@ -23,7 +23,7 @@ text = "Bang Bang!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1779095058]
 offset_left = 467.0
 offset_top = 274.0
 offset_right = 654.0

@@ -1,0 +1,30 @@
+{
+  "semantic_mappings": {
+	"element_fusion": {
+	  "fire + cold": {
+		"result": "steam",
+		"damage_type": "composite",
+		"special_effect": "obscure_vision"
+	  },
+	  "fire + lightning": {
+		"result": "plasma",
+		"damage_multiplier": 1.5
+	  }
+	},
+	"archetype_behaviors": {
+	  "projectile": {
+		"scene": "res://spells/projectile_base.tscn",
+		"collision_layers": ["enemy", "environment"]
+	  },
+	  "aoe": {
+		"scene": "res://spells/aoe_base.tscn",
+		"lingering_duration": 2.0
+	  }
+	},
+	"modifier_stacking": {
+	  "cooldown_mult": "multiplicative",
+	  "damage_add": "additive",
+	  "range_mult": "multiplicative"
+	}
+  }
+}

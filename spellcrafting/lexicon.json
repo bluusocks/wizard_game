@@ -1,0 +1,80 @@
+{
+  "language": "Arcane Speech",
+  "phonology": {
+	"allowed_sounds": ["f", "i", "r", "a", "k", "o", "l", "d"],
+	"phonotactics": "CV(C)"
+  },
+  "morphemes": [
+	{
+	  "form": "fir",
+	  "gloss": "fire",
+	  "category": "ROOT",
+	  "semantic_class": "ELEMENT",
+	  "features": {
+		"damage_type": "fire",
+		"color": "#ff4400"
+	  }
+	},
+	{
+	  "form": "kol",
+	  "gloss": "cold",
+	  "category": "ROOT",
+	  "semantic_class": "ELEMENT",
+	  "features": {
+		"damage_type": "frost",
+		"color": "#00aaff",
+		"slow_percent": 0.3
+	  }
+	},
+	{
+	  "form": "-ak",
+	  "gloss": "projectile",
+	  "category": "SUFFIX",
+	  "semantic_class": "ACTION_TYPE",
+	  "features": {
+		"spell_archetype": "projectile",
+		"speed": 400,
+		"range": 800
+	  }
+	},
+	{
+	  "form": "-um",
+	  "gloss": "area_effect",
+	  "category": "SUFFIX",
+	  "semantic_class": "ACTION_TYPE",
+	  "features": {
+		"spell_archetype": "aoe",
+		"radius": 150
+	  }
+	},
+	{
+	  "form": "len-",
+	  "gloss": "target.enemy",
+	  "category": "PREFIX",
+	  "semantic_class": "TARGET",
+	  "features": {
+		"target_filter": "enemy",
+		"auto_aim": true
+	  }
+	},
+	{
+	  "form": "sor-",
+	  "gloss": "target.self",
+	  "category": "PREFIX",
+	  "semantic_class": "TARGET",
+	  "features": {
+		"target_filter": "self"
+	  }
+	},
+	{
+	  "form": "-is",
+	  "gloss": "rapid",
+	  "category": "SUFFIX",
+	  "semantic_class": "MODIFIER",
+	  "features": {
+		"cast_time_mult": 0.5,
+		"cooldown_mult": 0.7
+	  }
+	}
+  ]
+}

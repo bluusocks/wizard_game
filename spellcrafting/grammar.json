@@ -1,0 +1,44 @@
+{
+  "grammar_type": "agglutinative",
+  "word_order": "PREFIX-ROOT-SUFFIX",
+  "rules": [
+	{
+	  "rule_name": "basic_spell",
+	  "pattern": "TARGET + ROOT + ACTION_TYPE",
+	  "required": true,
+	  "description": "Minimum spell structure"
+	},
+	{
+	  "rule_name": "modified_spell",
+	  "pattern": "TARGET + ROOT + ACTION_TYPE + MODIFIER*",
+	  "description": "Spell with optional modifiers"
+	},
+	{
+	  "rule_name": "compound_element",
+	  "pattern": "ROOT + ROOT + ACTION_TYPE",
+	  "constraints": {
+		"max_roots": 2,
+		"root_classes": ["ELEMENT"]
+	  },
+	  "semantic_operation": "element_fusion"
+	}
+  ],
+  "morphotactics": {
+	"PREFIX": {
+	  "allowed_categories": ["TARGET"],
+	  "max_count": 1,
+	  "position": 0
+	},
+	"ROOT": {
+	  "allowed_categories": ["ELEMENT", "CONCEPT"],
+	  "max_count": 2,
+	  "position": 1
+	},
+	"SUFFIX": {
+	  "allowed_categories": ["ACTION_TYPE", "MODIFIER"],
+	  "max_count": 3,
+	  "position": 2,
+	  "order": ["ACTION_TYPE", "MODIFIER"]
+	}
+  }
+}
